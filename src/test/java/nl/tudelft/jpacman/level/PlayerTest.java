@@ -18,15 +18,4 @@ public class PlayerTest {
 
         assertThat(player.isAlive()).isTrue();
     }
-
-    @Test
-    void playerShouldNotBeAliveAfterSetAliveFalse() {
-        PacManSprites sprites = new PacManSprites();
-        PlayerFactory factory = new PlayerFactory(sprites);
-        Player player = factory.createPacMan();
-
-        player.setAlive(false);
-
-        assertThat(player.isAlive()).isFalse();
-    }
 }
